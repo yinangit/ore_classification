@@ -1,0 +1,939 @@
+Namespace(Adiscription='Ore classification', saveName='/home/zhangyinan/ore/ore_classification/work_dirs/dual_tower', num_epochs=100, base_lr=0.0001, init_lr=1e-07, batch_size=32, weight_decay=0.0005, nclass=2, gpu='0', seed=3407, num_warmup=5, in_dim=1, lr_way='cos', log_interval=100, eval_interval=1, json_path='/home/zhangyinan/ore/data/dataset/train_val.json', modelName='dual_tower', pretrained='/home/zhangyinan/ore/ore_classification/pretrained/model.pt', hid_dim=128, savePath='/home/zhangyinan/ore/ore_classification/work_dirs/dual_tower')
+dual_tower(
+  (model_low): LeNet_5(
+    (layer1): Sequential(
+      (0): Conv2d(1, 6, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+      (1): ReLU()
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (3): Conv2d(6, 16, kernel_size=(5, 5), stride=(1, 1))
+      (4): ReLU()
+      (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (layer2): Sequential(
+      (0): Linear(in_features=400, out_features=120, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=120, out_features=84, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=84, out_features=2, bias=True)
+    )
+  )
+  (model_high): LeNet_5(
+    (layer1): Sequential(
+      (0): Conv2d(1, 6, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+      (1): ReLU()
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (3): Conv2d(6, 16, kernel_size=(5, 5), stride=(1, 1))
+      (4): ReLU()
+      (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (layer2): Sequential(
+      (0): Linear(in_features=400, out_features=120, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=120, out_features=84, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=84, out_features=2, bias=True)
+    )
+  )
+)
+Total trainable pytorch params:0.122052 MB
+Total pytorch params:0.122052 MB
+----------
+Train Epoch 0/99
+Epoch 0/99, Batch 0/361,Batch Loss=0.6950
+Epoch 0/99, Batch 100/361,Batch Loss=0.6918
+Epoch 0/99, Batch 200/361,Batch Loss=0.6981
+Epoch 0/99, Batch 300/361,Batch Loss=0.6954
+Epoch 0/99, AUC=0.4969, Accuracy=0.4974, Precision=0.4979, Recall=0.4969, F1=0.4559
+[[1116 1126]
+ [ 324  319]]
+----------
+Train Epoch 1/99
+Epoch 1/99, Batch 0/361,Batch Loss=0.6816
+Epoch 1/99, Batch 100/361,Batch Loss=0.6558
+Epoch 1/99, Batch 200/361,Batch Loss=0.6269
+Epoch 1/99, Batch 300/361,Batch Loss=0.5906
+Epoch 1/99, AUC=0.5005, Accuracy=0.7754, Precision=0.5250, Recall=0.5005, F1=0.4413
+[[2234    8]
+ [ 640    3]]
+----------
+Train Epoch 2/99
+Epoch 2/99, Batch 0/361,Batch Loss=0.5424
+Epoch 2/99, Batch 100/361,Batch Loss=0.3503
+Epoch 2/99, Batch 200/361,Batch Loss=0.5137
+Epoch 2/99, Batch 300/361,Batch Loss=0.4589
+Epoch 2/99, AUC=0.5000, Accuracy=0.7771, Precision=0.3886, Recall=0.5000, F1=0.4373
+[[2242    0]
+ [ 643    0]]
+----------
+Train Epoch 3/99
+Epoch 3/99, Batch 0/361,Batch Loss=0.4732
+Epoch 3/99, Batch 100/361,Batch Loss=0.5811
+Epoch 3/99, Batch 200/361,Batch Loss=0.5230
+Epoch 3/99, Batch 300/361,Batch Loss=0.4390
+Epoch 3/99, AUC=0.5000, Accuracy=0.7771, Precision=0.3886, Recall=0.5000, F1=0.4373
+[[2242    0]
+ [ 643    0]]
+----------
+Train Epoch 4/99
+Epoch 4/99, Batch 0/361,Batch Loss=0.3885
+Epoch 4/99, Batch 100/361,Batch Loss=0.5078
+Epoch 4/99, Batch 200/361,Batch Loss=0.4312
+Epoch 4/99, Batch 300/361,Batch Loss=0.4922
+Epoch 4/99, AUC=0.5000, Accuracy=0.7771, Precision=0.3886, Recall=0.5000, F1=0.4373
+[[2242    0]
+ [ 643    0]]
+----------
+Train Epoch 5/99
+Epoch 5/99, Batch 0/361,Batch Loss=0.5251
+Epoch 5/99, Batch 100/361,Batch Loss=0.5499
+Epoch 5/99, Batch 200/361,Batch Loss=0.4462
+Epoch 5/99, Batch 300/361,Batch Loss=0.6195
+Epoch 5/99, AUC=0.5000, Accuracy=0.7771, Precision=0.3886, Recall=0.5000, F1=0.4373
+[[2242    0]
+ [ 643    0]]
+----------
+Train Epoch 6/99
+Epoch 6/99, Batch 0/361,Batch Loss=0.5091
+Epoch 6/99, Batch 100/361,Batch Loss=0.4037
+Epoch 6/99, Batch 200/361,Batch Loss=0.6003
+Epoch 6/99, Batch 300/361,Batch Loss=0.4163
+Epoch 6/99, AUC=0.5000, Accuracy=0.7771, Precision=0.3886, Recall=0.5000, F1=0.4373
+[[2242    0]
+ [ 643    0]]
+----------
+Train Epoch 7/99
+Epoch 7/99, Batch 0/361,Batch Loss=0.5625
+Epoch 7/99, Batch 100/361,Batch Loss=0.4410
+Epoch 7/99, Batch 200/361,Batch Loss=0.5764
+Epoch 7/99, Batch 300/361,Batch Loss=0.4939
+Epoch 7/99, AUC=0.5000, Accuracy=0.7771, Precision=0.3886, Recall=0.5000, F1=0.4373
+[[2242    0]
+ [ 643    0]]
+----------
+Train Epoch 8/99
+Epoch 8/99, Batch 0/361,Batch Loss=0.4331
+Epoch 8/99, Batch 100/361,Batch Loss=0.3957
+Epoch 8/99, Batch 200/361,Batch Loss=0.4474
+Epoch 8/99, Batch 300/361,Batch Loss=0.4497
+Epoch 8/99, AUC=0.5000, Accuracy=0.7771, Precision=0.3886, Recall=0.5000, F1=0.4373
+[[2242    0]
+ [ 643    0]]
+----------
+Train Epoch 9/99
+Epoch 9/99, Batch 0/361,Batch Loss=0.4671
+Epoch 9/99, Batch 100/361,Batch Loss=0.4989
+Epoch 9/99, Batch 200/361,Batch Loss=0.4992
+Epoch 9/99, Batch 300/361,Batch Loss=0.5118
+Epoch 9/99, AUC=0.5000, Accuracy=0.7771, Precision=0.3886, Recall=0.5000, F1=0.4373
+[[2242    0]
+ [ 643    0]]
+----------
+Train Epoch 10/99
+Epoch 10/99, Batch 0/361,Batch Loss=0.5692
+Epoch 10/99, Batch 100/361,Batch Loss=0.6559
+Epoch 10/99, Batch 200/361,Batch Loss=0.4673
+Epoch 10/99, Batch 300/361,Batch Loss=0.5266
+Epoch 10/99, AUC=0.5008, Accuracy=0.7775, Precision=0.8887, Recall=0.5008, F1=0.4389
+[[2242    0]
+ [ 642    1]]
+----------
+Train Epoch 11/99
+Epoch 11/99, Batch 0/361,Batch Loss=0.6978
+Epoch 11/99, Batch 100/361,Batch Loss=0.5132
+Epoch 11/99, Batch 200/361,Batch Loss=0.6234
+Epoch 11/99, Batch 300/361,Batch Loss=0.4114
+Epoch 11/99, AUC=0.5000, Accuracy=0.7771, Precision=0.3886, Recall=0.5000, F1=0.4373
+[[2242    0]
+ [ 643    0]]
+----------
+Train Epoch 12/99
+Epoch 12/99, Batch 0/361,Batch Loss=0.5073
+Epoch 12/99, Batch 100/361,Batch Loss=0.6124
+Epoch 12/99, Batch 200/361,Batch Loss=0.5039
+Epoch 12/99, Batch 300/361,Batch Loss=0.3852
+Epoch 12/99, AUC=0.5008, Accuracy=0.7775, Precision=0.8887, Recall=0.5008, F1=0.4389
+[[2242    0]
+ [ 642    1]]
+----------
+Train Epoch 13/99
+Epoch 13/99, Batch 0/361,Batch Loss=0.5533
+Epoch 13/99, Batch 100/361,Batch Loss=0.4846
+Epoch 13/99, Batch 200/361,Batch Loss=0.6195
+Epoch 13/99, Batch 300/361,Batch Loss=0.6330
+Epoch 13/99, AUC=0.5008, Accuracy=0.7775, Precision=0.8887, Recall=0.5008, F1=0.4389
+[[2242    0]
+ [ 642    1]]
+----------
+Train Epoch 14/99
+Epoch 14/99, Batch 0/361,Batch Loss=0.4524
+Epoch 14/99, Batch 100/361,Batch Loss=0.6116
+Epoch 14/99, Batch 200/361,Batch Loss=0.5610
+Epoch 14/99, Batch 300/361,Batch Loss=0.5633
+Epoch 14/99, AUC=0.5029, Accuracy=0.7782, Precision=0.7891, Recall=0.5029, F1=0.4437
+[[2241    1]
+ [ 639    4]]
+----------
+Train Epoch 15/99
+Epoch 15/99, Batch 0/361,Batch Loss=0.4857
+Epoch 15/99, Batch 100/361,Batch Loss=0.5606
+Epoch 15/99, Batch 200/361,Batch Loss=0.4468
+Epoch 15/99, Batch 300/361,Batch Loss=0.4552
+Epoch 15/99, AUC=0.5052, Accuracy=0.7775, Precision=0.6542, Recall=0.5052, F1=0.4508
+[[2234    8]
+ [ 634    9]]
+----------
+Train Epoch 16/99
+Epoch 16/99, Batch 0/361,Batch Loss=0.4183
+Epoch 16/99, Batch 100/361,Batch Loss=0.4247
+Epoch 16/99, Batch 200/361,Batch Loss=0.4050
+Epoch 16/99, Batch 300/361,Batch Loss=0.4780
+Epoch 16/99, AUC=0.5056, Accuracy=0.7747, Precision=0.5865, Recall=0.5056, F1=0.4554
+[[2222   20]
+ [ 630   13]]
+----------
+Train Epoch 17/99
+Epoch 17/99, Batch 0/361,Batch Loss=0.4674
+Epoch 17/99, Batch 100/361,Batch Loss=0.5446
+Epoch 17/99, Batch 200/361,Batch Loss=0.6935
+Epoch 17/99, Batch 300/361,Batch Loss=0.5113
+Epoch 17/99, AUC=0.5027, Accuracy=0.7761, Precision=0.5890, Recall=0.5027, F1=0.4459
+[[2233    9]
+ [ 637    6]]
+----------
+Train Epoch 18/99
+Epoch 18/99, Batch 0/361,Batch Loss=0.5086
+Epoch 18/99, Batch 100/361,Batch Loss=0.5202
+Epoch 18/99, Batch 200/361,Batch Loss=0.5086
+Epoch 18/99, Batch 300/361,Batch Loss=0.5145
+Epoch 18/99, AUC=0.5038, Accuracy=0.7726, Precision=0.5514, Recall=0.5038, F1=0.4532
+[[2217   25]
+ [ 631   12]]
+----------
+Train Epoch 19/99
+Epoch 19/99, Batch 0/361,Batch Loss=0.5409
+Epoch 19/99, Batch 100/361,Batch Loss=0.4156
+Epoch 19/99, Batch 200/361,Batch Loss=0.4504
+Epoch 19/99, Batch 300/361,Batch Loss=0.4234
+Epoch 19/99, AUC=0.5052, Accuracy=0.7740, Precision=0.5752, Recall=0.5052, F1=0.4552
+[[2220   22]
+ [ 630   13]]
+----------
+Train Epoch 20/99
+Epoch 20/99, Batch 0/361,Batch Loss=0.4365
+Epoch 20/99, Batch 100/361,Batch Loss=0.3638
+Epoch 20/99, Batch 200/361,Batch Loss=0.5609
+Epoch 20/99, Batch 300/361,Batch Loss=0.4333
+Epoch 20/99, AUC=0.5065, Accuracy=0.7744, Precision=0.5871, Recall=0.5065, F1=0.4581
+[[2219   23]
+ [ 628   15]]
+----------
+Train Epoch 21/99
+Epoch 21/99, Batch 0/361,Batch Loss=0.5109
+Epoch 21/99, Batch 100/361,Batch Loss=0.4417
+Epoch 21/99, Batch 200/361,Batch Loss=0.4519
+Epoch 21/99, Batch 300/361,Batch Loss=0.4060
+Epoch 21/99, AUC=0.5037, Accuracy=0.7750, Precision=0.5767, Recall=0.5037, F1=0.4499
+[[2227   15]
+ [ 634    9]]
+----------
+Train Epoch 22/99
+Epoch 22/99, Batch 0/361,Batch Loss=0.5677
+Epoch 22/99, Batch 100/361,Batch Loss=0.4535
+Epoch 22/99, Batch 200/361,Batch Loss=0.4187
+Epoch 22/99, Batch 300/361,Batch Loss=0.6288
+Epoch 22/99, AUC=0.5077, Accuracy=0.7719, Precision=0.5717, Recall=0.5077, F1=0.4638
+[[2207   35]
+ [ 623   20]]
+----------
+Train Epoch 23/99
+Epoch 23/99, Batch 0/361,Batch Loss=0.4388
+Epoch 23/99, Batch 100/361,Batch Loss=0.4627
+Epoch 23/99, Batch 200/361,Batch Loss=0.5775
+Epoch 23/99, Batch 300/361,Batch Loss=0.4171
+Epoch 23/99, AUC=0.5063, Accuracy=0.7705, Precision=0.5563, Recall=0.5063, F1=0.4619
+[[2204   38]
+ [ 624   19]]
+----------
+Train Epoch 24/99
+Epoch 24/99, Batch 0/361,Batch Loss=0.4792
+Epoch 24/99, Batch 100/361,Batch Loss=0.5101
+Epoch 24/99, Batch 200/361,Batch Loss=0.5873
+Epoch 24/99, Batch 300/361,Batch Loss=0.6477
+Epoch 24/99, AUC=0.5051, Accuracy=0.7730, Precision=0.5645, Recall=0.5051, F1=0.4561
+[[2216   26]
+ [ 629   14]]
+----------
+Train Epoch 25/99
+Epoch 25/99, Batch 0/361,Batch Loss=0.4360
+Epoch 25/99, Batch 100/361,Batch Loss=0.4874
+Epoch 25/99, Batch 200/361,Batch Loss=0.4395
+Epoch 25/99, Batch 300/361,Batch Loss=0.3508
+Epoch 25/99, AUC=0.5060, Accuracy=0.7674, Precision=0.5424, Recall=0.5060, F1=0.4644
+[[2192   50]
+ [ 621   22]]
+----------
+Train Epoch 26/99
+Epoch 26/99, Batch 0/361,Batch Loss=0.4203
+Epoch 26/99, Batch 100/361,Batch Loss=0.4887
+Epoch 26/99, Batch 200/361,Batch Loss=0.4521
+Epoch 26/99, Batch 300/361,Batch Loss=0.4614
+Epoch 26/99, AUC=0.5081, Accuracy=0.7698, Precision=0.5616, Recall=0.5081, F1=0.4668
+[[2198   44]
+ [ 620   23]]
+----------
+Train Epoch 27/99
+Epoch 27/99, Batch 0/361,Batch Loss=0.3959
+Epoch 27/99, Batch 100/361,Batch Loss=0.5295
+Epoch 27/99, Batch 200/361,Batch Loss=0.4737
+Epoch 27/99, Batch 300/361,Batch Loss=0.6097
+Epoch 27/99, AUC=0.5111, Accuracy=0.7702, Precision=0.5747, Recall=0.5111, F1=0.4733
+[[2194   48]
+ [ 615   28]]
+----------
+Train Epoch 28/99
+Epoch 28/99, Batch 0/361,Batch Loss=0.4201
+Epoch 28/99, Batch 100/361,Batch Loss=0.5416
+Epoch 28/99, Batch 200/361,Batch Loss=0.4250
+Epoch 28/99, Batch 300/361,Batch Loss=0.5597
+Epoch 28/99, AUC=0.5144, Accuracy=0.7685, Precision=0.5767, Recall=0.5144, F1=0.4822
+[[2181   61]
+ [ 607   36]]
+----------
+Train Epoch 29/99
+Epoch 29/99, Batch 0/361,Batch Loss=0.3877
+Epoch 29/99, Batch 100/361,Batch Loss=0.4189
+Epoch 29/99, Batch 200/361,Batch Loss=0.4134
+Epoch 29/99, Batch 300/361,Batch Loss=0.3997
+Epoch 29/99, AUC=0.5112, Accuracy=0.7695, Precision=0.5718, Recall=0.5112, F1=0.4742
+[[2191   51]
+ [ 614   29]]
+----------
+Train Epoch 30/99
+Epoch 30/99, Batch 0/361,Batch Loss=0.6363
+Epoch 30/99, Batch 100/361,Batch Loss=0.5391
+Epoch 30/99, Batch 200/361,Batch Loss=0.5285
+Epoch 30/99, Batch 300/361,Batch Loss=0.4532
+Epoch 30/99, AUC=0.5151, Accuracy=0.7678, Precision=0.5757, Recall=0.5151, F1=0.4843
+[[2177   65]
+ [ 605   38]]
+----------
+Train Epoch 31/99
+Epoch 31/99, Batch 0/361,Batch Loss=0.4103
+Epoch 31/99, Batch 100/361,Batch Loss=0.4968
+Epoch 31/99, Batch 200/361,Batch Loss=0.5757
+Epoch 31/99, Batch 300/361,Batch Loss=0.4094
+Epoch 31/99, AUC=0.5117, Accuracy=0.7660, Precision=0.5607, Recall=0.5117, F1=0.4786
+[[2176   66]
+ [ 609   34]]
+----------
+Train Epoch 32/99
+Epoch 32/99, Batch 0/361,Batch Loss=0.5595
+Epoch 32/99, Batch 100/361,Batch Loss=0.2886
+Epoch 32/99, Batch 200/361,Batch Loss=0.3897
+Epoch 32/99, Batch 300/361,Batch Loss=0.5092
+Epoch 32/99, AUC=0.5179, Accuracy=0.7619, Precision=0.5654, Recall=0.5179, F1=0.4946
+[[2148   94]
+ [ 593   50]]
+----------
+Train Epoch 33/99
+Epoch 33/99, Batch 0/361,Batch Loss=0.5999
+Epoch 33/99, Batch 100/361,Batch Loss=0.4605
+Epoch 33/99, Batch 200/361,Batch Loss=0.3814
+Epoch 33/99, Batch 300/361,Batch Loss=0.4388
+Epoch 33/99, AUC=0.5178, Accuracy=0.7608, Precision=0.5630, Recall=0.5178, F1=0.4951
+[[2144   98]
+ [ 592   51]]
+----------
+Train Epoch 34/99
+Epoch 34/99, Batch 0/361,Batch Loss=0.3834
+Epoch 34/99, Batch 100/361,Batch Loss=0.3318
+Epoch 34/99, Batch 200/361,Batch Loss=0.4415
+Epoch 34/99, Batch 300/361,Batch Loss=0.3063
+Epoch 34/99, AUC=0.5155, Accuracy=0.7598, Precision=0.5558, Recall=0.5155, F1=0.4913
+[[2144   98]
+ [ 595   48]]
+----------
+Train Epoch 35/99
+Epoch 35/99, Batch 0/361,Batch Loss=0.5437
+Epoch 35/99, Batch 100/361,Batch Loss=0.6453
+Epoch 35/99, Batch 200/361,Batch Loss=0.4318
+Epoch 35/99, Batch 300/361,Batch Loss=0.5468
+Epoch 35/99, AUC=0.5226, Accuracy=0.7511, Precision=0.5564, Recall=0.5226, F1=0.5094
+[[2096  146]
+ [ 572   71]]
+----------
+Train Epoch 36/99
+Epoch 36/99, Batch 0/361,Batch Loss=0.4709
+Epoch 36/99, Batch 100/361,Batch Loss=0.4047
+Epoch 36/99, Batch 200/361,Batch Loss=0.4598
+Epoch 36/99, Batch 300/361,Batch Loss=0.3909
+Epoch 36/99, AUC=0.5136, Accuracy=0.7612, Precision=0.5539, Recall=0.5136, F1=0.4865
+[[2153   89]
+ [ 600   43]]
+----------
+Train Epoch 37/99
+Epoch 37/99, Batch 0/361,Batch Loss=0.4894
+Epoch 37/99, Batch 100/361,Batch Loss=0.4691
+Epoch 37/99, Batch 200/361,Batch Loss=0.3479
+Epoch 37/99, Batch 300/361,Batch Loss=0.4139
+Epoch 37/99, AUC=0.5202, Accuracy=0.7612, Precision=0.5686, Recall=0.5202, F1=0.4995
+[[2141  101]
+ [ 588   55]]
+----------
+Train Epoch 38/99
+Epoch 38/99, Batch 0/361,Batch Loss=0.3681
+Epoch 38/99, Batch 100/361,Batch Loss=0.2645
+Epoch 38/99, Batch 200/361,Batch Loss=0.3724
+Epoch 38/99, Batch 300/361,Batch Loss=0.4295
+Epoch 38/99, AUC=0.5221, Accuracy=0.7546, Precision=0.5602, Recall=0.5221, F1=0.5068
+[[2111  131]
+ [ 577   66]]
+----------
+Train Epoch 39/99
+Epoch 39/99, Batch 0/361,Batch Loss=0.3596
+Epoch 39/99, Batch 100/361,Batch Loss=0.4041
+Epoch 39/99, Batch 200/361,Batch Loss=0.4097
+Epoch 39/99, Batch 300/361,Batch Loss=0.4625
+Epoch 39/99, AUC=0.5201, Accuracy=0.7515, Precision=0.5525, Recall=0.5201, F1=0.5049
+[[2102  140]
+ [ 577   66]]
+----------
+Train Epoch 40/99
+Epoch 40/99, Batch 0/361,Batch Loss=0.4590
+Epoch 40/99, Batch 100/361,Batch Loss=0.5356
+Epoch 40/99, Batch 200/361,Batch Loss=0.5531
+Epoch 40/99, Batch 300/361,Batch Loss=0.4820
+Epoch 40/99, AUC=0.5188, Accuracy=0.7546, Precision=0.5542, Recall=0.5188, F1=0.5008
+[[2117  125]
+ [ 583   60]]
+----------
+Train Epoch 41/99
+Epoch 41/99, Batch 0/361,Batch Loss=0.3512
+Epoch 41/99, Batch 100/361,Batch Loss=0.3427
+Epoch 41/99, Batch 200/361,Batch Loss=0.3236
+Epoch 41/99, Batch 300/361,Batch Loss=0.2204
+Epoch 41/99, AUC=0.5200, Accuracy=0.7556, Precision=0.5580, Recall=0.5200, F1=0.5024
+[[2119  123]
+ [ 582   61]]
+----------
+Train Epoch 42/99
+Epoch 42/99, Batch 0/361,Batch Loss=0.4307
+Epoch 42/99, Batch 100/361,Batch Loss=0.4520
+Epoch 42/99, Batch 200/361,Batch Loss=0.4058
+Epoch 42/99, Batch 300/361,Batch Loss=0.4010
+Epoch 42/99, AUC=0.5169, Accuracy=0.7542, Precision=0.5500, Recall=0.5169, F1=0.4976
+[[2119  123]
+ [ 586   57]]
+----------
+Train Epoch 43/99
+Epoch 43/99, Batch 0/361,Batch Loss=0.4806
+Epoch 43/99, Batch 100/361,Batch Loss=0.3407
+Epoch 43/99, Batch 200/361,Batch Loss=0.3697
+Epoch 43/99, Batch 300/361,Batch Loss=0.3467
+Epoch 43/99, AUC=0.5192, Accuracy=0.7570, Precision=0.5588, Recall=0.5192, F1=0.5002
+[[2126  116]
+ [ 585   58]]
+----------
+Train Epoch 44/99
+Epoch 44/99, Batch 0/361,Batch Loss=0.4996
+Epoch 44/99, Batch 100/361,Batch Loss=0.4840
+Epoch 44/99, Batch 200/361,Batch Loss=0.2953
+Epoch 44/99, Batch 300/361,Batch Loss=0.3546
+Epoch 44/99, AUC=0.5155, Accuracy=0.7504, Precision=0.5427, Recall=0.5155, F1=0.4974
+[[2106  136]
+ [ 584   59]]
+----------
+Train Epoch 45/99
+Epoch 45/99, Batch 0/361,Batch Loss=0.4201
+Epoch 45/99, Batch 100/361,Batch Loss=0.4732
+Epoch 45/99, Batch 200/361,Batch Loss=0.4900
+Epoch 45/99, Batch 300/361,Batch Loss=0.3918
+Epoch 45/99, AUC=0.5114, Accuracy=0.7501, Precision=0.5335, Recall=0.5114, F1=0.4901
+[[2112  130]
+ [ 591   52]]
+----------
+Train Epoch 46/99
+Epoch 46/99, Batch 0/361,Batch Loss=0.4451
+Epoch 46/99, Batch 100/361,Batch Loss=0.2897
+Epoch 46/99, Batch 200/361,Batch Loss=0.2163
+Epoch 46/99, Batch 300/361,Batch Loss=0.3685
+Epoch 46/99, AUC=0.5197, Accuracy=0.7414, Precision=0.5421, Recall=0.5197, F1=0.5090
+[[2062  180]
+ [ 566   77]]
+----------
+Train Epoch 47/99
+Epoch 47/99, Batch 0/361,Batch Loss=0.4318
+Epoch 47/99, Batch 100/361,Batch Loss=0.3876
+Epoch 47/99, Batch 200/361,Batch Loss=0.4145
+Epoch 47/99, Batch 300/361,Batch Loss=0.3337
+Epoch 47/99, AUC=0.5100, Accuracy=0.7539, Precision=0.5337, Recall=0.5100, F1=0.4848
+[[2130  112]
+ [ 598   45]]
+----------
+Train Epoch 48/99
+Epoch 48/99, Batch 0/361,Batch Loss=0.4069
+Epoch 48/99, Batch 100/361,Batch Loss=0.4978
+Epoch 48/99, Batch 200/361,Batch Loss=0.4311
+Epoch 48/99, Batch 300/361,Batch Loss=0.2588
+Epoch 48/99, AUC=0.5180, Accuracy=0.7560, Precision=0.5547, Recall=0.5180, F1=0.4986
+[[2124  118]
+ [ 586   57]]
+----------
+Train Epoch 49/99
+Epoch 49/99, Batch 0/361,Batch Loss=0.3825
+Epoch 49/99, Batch 100/361,Batch Loss=0.4650
+Epoch 49/99, Batch 200/361,Batch Loss=0.2931
+Epoch 49/99, Batch 300/361,Batch Loss=0.2718
+Epoch 49/99, AUC=0.5220, Accuracy=0.7484, Precision=0.5521, Recall=0.5220, F1=0.5096
+[[2086  156]
+ [ 570   73]]
+----------
+Train Epoch 50/99
+Epoch 50/99, Batch 0/361,Batch Loss=0.3634
+Epoch 50/99, Batch 100/361,Batch Loss=0.4484
+Epoch 50/99, Batch 200/361,Batch Loss=0.4632
+Epoch 50/99, Batch 300/361,Batch Loss=0.3283
+Epoch 50/99, AUC=0.5173, Accuracy=0.7497, Precision=0.5454, Recall=0.5173, F1=0.5009
+[[2100  142]
+ [ 580   63]]
+----------
+Train Epoch 51/99
+Epoch 51/99, Batch 0/361,Batch Loss=0.3390
+Epoch 51/99, Batch 100/361,Batch Loss=0.4916
+Epoch 51/99, Batch 200/361,Batch Loss=0.3611
+Epoch 51/99, Batch 300/361,Batch Loss=0.4523
+Epoch 51/99, AUC=0.5233, Accuracy=0.7418, Precision=0.5479, Recall=0.5233, F1=0.5144
+[[2057  185]
+ [ 560   83]]
+----------
+Train Epoch 52/99
+Epoch 52/99, Batch 0/361,Batch Loss=0.3747
+Epoch 52/99, Batch 100/361,Batch Loss=0.4367
+Epoch 52/99, Batch 200/361,Batch Loss=0.5411
+Epoch 52/99, Batch 300/361,Batch Loss=0.3971
+Epoch 52/99, AUC=0.5135, Accuracy=0.7532, Precision=0.5413, Recall=0.5135, F1=0.4919
+[[2121  121]
+ [ 591   52]]
+----------
+Train Epoch 53/99
+Epoch 53/99, Batch 0/361,Batch Loss=0.3795
+Epoch 53/99, Batch 100/361,Batch Loss=0.2390
+Epoch 53/99, Batch 200/361,Batch Loss=0.3341
+Epoch 53/99, Batch 300/361,Batch Loss=0.4584
+Epoch 53/99, AUC=0.5131, Accuracy=0.7570, Precision=0.5456, Recall=0.5131, F1=0.4887
+[[2137  105]
+ [ 596   47]]
+----------
+Train Epoch 54/99
+Epoch 54/99, Batch 0/361,Batch Loss=0.3582
+Epoch 54/99, Batch 100/361,Batch Loss=0.5546
+Epoch 54/99, Batch 200/361,Batch Loss=0.3154
+Epoch 54/99, Batch 300/361,Batch Loss=0.2833
+Epoch 54/99, AUC=0.5252, Accuracy=0.7310, Precision=0.5430, Recall=0.5252, F1=0.5207
+[[2010  232]
+ [ 544   99]]
+----------
+Train Epoch 55/99
+Epoch 55/99, Batch 0/361,Batch Loss=0.3287
+Epoch 55/99, Batch 100/361,Batch Loss=0.3623
+Epoch 55/99, Batch 200/361,Batch Loss=0.2950
+Epoch 55/99, Batch 300/361,Batch Loss=0.2759
+Epoch 55/99, AUC=0.5210, Accuracy=0.7296, Precision=0.5366, Recall=0.5210, F1=0.5151
+[[2012  230]
+ [ 550   93]]
+----------
+Train Epoch 56/99
+Epoch 56/99, Batch 0/361,Batch Loss=0.3940
+Epoch 56/99, Batch 100/361,Batch Loss=0.4057
+Epoch 56/99, Batch 200/361,Batch Loss=0.3285
+Epoch 56/99, Batch 300/361,Batch Loss=0.2871
+Epoch 56/99, AUC=0.5193, Accuracy=0.7425, Precision=0.5422, Recall=0.5193, F1=0.5078
+[[2067  175]
+ [ 568   75]]
+----------
+Train Epoch 57/99
+Epoch 57/99, Batch 0/361,Batch Loss=0.4326
+Epoch 57/99, Batch 100/361,Batch Loss=0.2356
+Epoch 57/99, Batch 200/361,Batch Loss=0.4561
+Epoch 57/99, Batch 300/361,Batch Loss=0.2813
+Epoch 57/99, AUC=0.5256, Accuracy=0.7307, Precision=0.5433, Recall=0.5256, F1=0.5213
+[[2008  234]
+ [ 543  100]]
+----------
+Train Epoch 58/99
+Epoch 58/99, Batch 0/361,Batch Loss=0.5092
+Epoch 58/99, Batch 100/361,Batch Loss=0.3559
+Epoch 58/99, Batch 200/361,Batch Loss=0.3358
+Epoch 58/99, Batch 300/361,Batch Loss=0.3614
+Epoch 58/99, AUC=0.5198, Accuracy=0.7501, Precision=0.5503, Recall=0.5198, F1=0.5050
+[[2097  145]
+ [ 576   67]]
+----------
+Train Epoch 59/99
+Epoch 59/99, Batch 0/361,Batch Loss=0.5009
+Epoch 59/99, Batch 100/361,Batch Loss=0.3267
+Epoch 59/99, Batch 200/361,Batch Loss=0.4493
+Epoch 59/99, Batch 300/361,Batch Loss=0.2710
+Epoch 59/99, AUC=0.5214, Accuracy=0.7293, Precision=0.5369, Recall=0.5214, F1=0.5157
+[[2010  232]
+ [ 549   94]]
+----------
+Train Epoch 60/99
+Epoch 60/99, Batch 0/361,Batch Loss=0.3009
+Epoch 60/99, Batch 100/361,Batch Loss=0.3167
+Epoch 60/99, Batch 200/361,Batch Loss=0.2208
+Epoch 60/99, Batch 300/361,Batch Loss=0.3037
+Epoch 60/99, AUC=0.5265, Accuracy=0.7286, Precision=0.5432, Recall=0.5265, F1=0.5230
+[[1998  244]
+ [ 539  104]]
+----------
+Train Epoch 61/99
+Epoch 61/99, Batch 0/361,Batch Loss=0.3331
+Epoch 61/99, Batch 100/361,Batch Loss=0.3572
+Epoch 61/99, Batch 200/361,Batch Loss=0.6056
+Epoch 61/99, Batch 300/361,Batch Loss=0.4174
+Epoch 61/99, AUC=0.5251, Accuracy=0.7317, Precision=0.5433, Recall=0.5251, F1=0.5204
+[[2013  229]
+ [ 545   98]]
+----------
+Train Epoch 62/99
+Epoch 62/99, Batch 0/361,Batch Loss=0.4344
+Epoch 62/99, Batch 100/361,Batch Loss=0.3215
+Epoch 62/99, Batch 200/361,Batch Loss=0.2578
+Epoch 62/99, Batch 300/361,Batch Loss=0.4488
+Epoch 62/99, AUC=0.5200, Accuracy=0.7435, Precision=0.5442, Recall=0.5200, F1=0.5084
+[[2070  172]
+ [ 568   75]]
+----------
+Train Epoch 63/99
+Epoch 63/99, Batch 0/361,Batch Loss=0.2191
+Epoch 63/99, Batch 100/361,Batch Loss=0.3660
+Epoch 63/99, Batch 200/361,Batch Loss=0.4259
+Epoch 63/99, Batch 300/361,Batch Loss=0.5205
+Epoch 63/99, AUC=0.5227, Accuracy=0.7418, Precision=0.5470, Recall=0.5227, F1=0.5136
+[[2058  184]
+ [ 561   82]]
+----------
+Train Epoch 64/99
+Epoch 64/99, Batch 0/361,Batch Loss=0.3254
+Epoch 64/99, Batch 100/361,Batch Loss=0.3842
+Epoch 64/99, Batch 200/361,Batch Loss=0.3714
+Epoch 64/99, Batch 300/361,Batch Loss=0.2282
+Epoch 64/99, AUC=0.5213, Accuracy=0.7386, Precision=0.5425, Recall=0.5213, F1=0.5125
+[[2048  194]
+ [ 560   83]]
+----------
+Train Epoch 65/99
+Epoch 65/99, Batch 0/361,Batch Loss=0.4354
+Epoch 65/99, Batch 100/361,Batch Loss=0.4538
+Epoch 65/99, Batch 200/361,Batch Loss=0.3012
+Epoch 65/99, Batch 300/361,Batch Loss=0.3498
+Epoch 65/99, AUC=0.5236, Accuracy=0.7345, Precision=0.5430, Recall=0.5236, F1=0.5174
+[[2027  215]
+ [ 551   92]]
+----------
+Train Epoch 66/99
+Epoch 66/99, Batch 0/361,Batch Loss=0.3054
+Epoch 66/99, Batch 100/361,Batch Loss=0.2635
+Epoch 66/99, Batch 200/361,Batch Loss=0.2620
+Epoch 66/99, Batch 300/361,Batch Loss=0.3930
+Epoch 66/99, AUC=0.5217, Accuracy=0.7289, Precision=0.5372, Recall=0.5217, F1=0.5162
+[[2008  234]
+ [ 548   95]]
+----------
+Train Epoch 67/99
+Epoch 67/99, Batch 0/361,Batch Loss=0.3628
+Epoch 67/99, Batch 100/361,Batch Loss=0.3040
+Epoch 67/99, Batch 200/361,Batch Loss=0.3998
+Epoch 67/99, Batch 300/361,Batch Loss=0.2486
+Epoch 67/99, AUC=0.5248, Accuracy=0.7286, Precision=0.5411, Recall=0.5248, F1=0.5207
+[[2001  241]
+ [ 542  101]]
+----------
+Train Epoch 68/99
+Epoch 68/99, Batch 0/361,Batch Loss=0.2703
+Epoch 68/99, Batch 100/361,Batch Loss=0.2316
+Epoch 68/99, Batch 200/361,Batch Loss=0.4248
+Epoch 68/99, Batch 300/361,Batch Loss=0.1600
+Epoch 68/99, AUC=0.5250, Accuracy=0.7272, Precision=0.5406, Recall=0.5250, F1=0.5214
+[[1995  247]
+ [ 540  103]]
+----------
+Train Epoch 69/99
+Epoch 69/99, Batch 0/361,Batch Loss=0.2918
+Epoch 69/99, Batch 100/361,Batch Loss=0.4677
+Epoch 69/99, Batch 200/361,Batch Loss=0.3194
+Epoch 69/99, Batch 300/361,Batch Loss=0.4121
+Epoch 69/99, AUC=0.5242, Accuracy=0.7286, Precision=0.5404, Recall=0.5242, F1=0.5199
+[[2002  240]
+ [ 543  100]]
+----------
+Train Epoch 70/99
+Epoch 70/99, Batch 0/361,Batch Loss=0.2730
+Epoch 70/99, Batch 100/361,Batch Loss=0.3231
+Epoch 70/99, Batch 200/361,Batch Loss=0.4072
+Epoch 70/99, Batch 300/361,Batch Loss=0.4189
+Epoch 70/99, AUC=0.5219, Accuracy=0.7258, Precision=0.5359, Recall=0.5219, F1=0.5174
+[[1995  247]
+ [ 544   99]]
+----------
+Train Epoch 71/99
+Epoch 71/99, Batch 0/361,Batch Loss=0.2858
+Epoch 71/99, Batch 100/361,Batch Loss=0.3529
+Epoch 71/99, Batch 200/361,Batch Loss=0.3109
+Epoch 71/99, Batch 300/361,Batch Loss=0.4747
+Epoch 71/99, AUC=0.5211, Accuracy=0.7272, Precision=0.5356, Recall=0.5211, F1=0.5159
+[[2002  240]
+ [ 547   96]]
+----------
+Train Epoch 72/99
+Epoch 72/99, Batch 0/361,Batch Loss=0.3447
+Epoch 72/99, Batch 100/361,Batch Loss=0.2183
+Epoch 72/99, Batch 200/361,Batch Loss=0.5128
+Epoch 72/99, Batch 300/361,Batch Loss=0.3499
+Epoch 72/99, AUC=0.5203, Accuracy=0.7251, Precision=0.5336, Recall=0.5203, F1=0.5154
+[[1995  247]
+ [ 546   97]]
+----------
+Train Epoch 73/99
+Epoch 73/99, Batch 0/361,Batch Loss=0.3477
+Epoch 73/99, Batch 100/361,Batch Loss=0.2853
+Epoch 73/99, Batch 200/361,Batch Loss=0.2851
+Epoch 73/99, Batch 300/361,Batch Loss=0.2174
+Epoch 73/99, AUC=0.5244, Accuracy=0.7418, Precision=0.5495, Recall=0.5244, F1=0.5162
+[[2055  187]
+ [ 558   85]]
+----------
+Train Epoch 74/99
+Epoch 74/99, Batch 0/361,Batch Loss=0.4951
+Epoch 74/99, Batch 100/361,Batch Loss=0.2655
+Epoch 74/99, Batch 200/361,Batch Loss=0.3278
+Epoch 74/99, Batch 300/361,Batch Loss=0.3257
+Epoch 74/99, AUC=0.5252, Accuracy=0.7293, Precision=0.5420, Recall=0.5252, F1=0.5212
+[[2003  239]
+ [ 542  101]]
+----------
+Train Epoch 75/99
+Epoch 75/99, Batch 0/361,Batch Loss=0.3705
+Epoch 75/99, Batch 100/361,Batch Loss=0.3002
+Epoch 75/99, Batch 200/361,Batch Loss=0.5087
+Epoch 75/99, Batch 300/361,Batch Loss=0.3022
+Epoch 75/99, AUC=0.5230, Accuracy=0.7328, Precision=0.5411, Recall=0.5230, F1=0.5171
+[[2021  221]
+ [ 550   93]]
+----------
+Train Epoch 76/99
+Epoch 76/99, Batch 0/361,Batch Loss=0.3784
+Epoch 76/99, Batch 100/361,Batch Loss=0.3071
+Epoch 76/99, Batch 200/361,Batch Loss=0.5020
+Epoch 76/99, Batch 300/361,Batch Loss=0.2990
+Epoch 76/99, AUC=0.5214, Accuracy=0.7293, Precision=0.5369, Recall=0.5214, F1=0.5157
+[[2010  232]
+ [ 549   94]]
+----------
+Train Epoch 77/99
+Epoch 77/99, Batch 0/361,Batch Loss=0.1609
+Epoch 77/99, Batch 100/361,Batch Loss=0.3342
+Epoch 77/99, Batch 200/361,Batch Loss=0.4271
+Epoch 77/99, Batch 300/361,Batch Loss=0.2633
+Epoch 77/99, AUC=0.5211, Accuracy=0.7324, Precision=0.5383, Recall=0.5211, F1=0.5144
+[[2023  219]
+ [ 553   90]]
+----------
+Train Epoch 78/99
+Epoch 78/99, Batch 0/361,Batch Loss=0.3225
+Epoch 78/99, Batch 100/361,Batch Loss=0.2990
+Epoch 78/99, Batch 200/361,Batch Loss=0.2151
+Epoch 78/99, Batch 300/361,Batch Loss=0.3127
+Epoch 78/99, AUC=0.5234, Accuracy=0.7393, Precision=0.5461, Recall=0.5234, F1=0.5155
+[[2047  195]
+ [ 557   86]]
+----------
+Train Epoch 79/99
+Epoch 79/99, Batch 0/361,Batch Loss=0.3321
+Epoch 79/99, Batch 100/361,Batch Loss=0.3201
+Epoch 79/99, Batch 200/361,Batch Loss=0.2789
+Epoch 79/99, Batch 300/361,Batch Loss=0.2955
+Epoch 79/99, AUC=0.5184, Accuracy=0.7213, Precision=0.5295, Recall=0.5184, F1=0.5137
+[[1983  259]
+ [ 545   98]]
+----------
+Train Epoch 80/99
+Epoch 80/99, Batch 0/361,Batch Loss=0.2290
+Epoch 80/99, Batch 100/361,Batch Loss=0.4152
+Epoch 80/99, Batch 200/361,Batch Loss=0.3330
+Epoch 80/99, Batch 300/361,Batch Loss=0.2153
+Epoch 80/99, AUC=0.5195, Accuracy=0.7237, Precision=0.5318, Recall=0.5195, F1=0.5145
+[[1991  251]
+ [ 546   97]]
+----------
+Train Epoch 81/99
+Epoch 81/99, Batch 0/361,Batch Loss=0.3155
+Epoch 81/99, Batch 100/361,Batch Loss=0.4301
+Epoch 81/99, Batch 200/361,Batch Loss=0.2989
+Epoch 81/99, Batch 300/361,Batch Loss=0.3262
+Epoch 81/99, AUC=0.5208, Accuracy=0.7345, Precision=0.5390, Recall=0.5208, F1=0.5133
+[[2032  210]
+ [ 556   87]]
+----------
+Train Epoch 82/99
+Epoch 82/99, Batch 0/361,Batch Loss=0.2758
+Epoch 82/99, Batch 100/361,Batch Loss=0.2437
+Epoch 82/99, Batch 200/361,Batch Loss=0.2298
+Epoch 82/99, Batch 300/361,Batch Loss=0.2994
+Epoch 82/99, AUC=0.5212, Accuracy=0.7282, Precision=0.5362, Recall=0.5212, F1=0.5158
+[[2006  236]
+ [ 548   95]]
+----------
+Train Epoch 83/99
+Epoch 83/99, Batch 0/361,Batch Loss=0.4653
+Epoch 83/99, Batch 100/361,Batch Loss=0.2623
+Epoch 83/99, Batch 200/361,Batch Loss=0.3712
+Epoch 83/99, Batch 300/361,Batch Loss=0.4395
+Epoch 83/99, AUC=0.5212, Accuracy=0.7282, Precision=0.5362, Recall=0.5212, F1=0.5158
+[[2006  236]
+ [ 548   95]]
+----------
+Train Epoch 84/99
+Epoch 84/99, Batch 0/361,Batch Loss=0.4356
+Epoch 84/99, Batch 100/361,Batch Loss=0.2272
+Epoch 84/99, Batch 200/361,Batch Loss=0.2684
+Epoch 84/99, Batch 300/361,Batch Loss=0.3636
+Epoch 84/99, AUC=0.5210, Accuracy=0.7262, Precision=0.5349, Recall=0.5210, F1=0.5160
+[[1998  244]
+ [ 546   97]]
+----------
+Train Epoch 85/99
+Epoch 85/99, Batch 0/361,Batch Loss=0.6320
+Epoch 85/99, Batch 100/361,Batch Loss=0.2450
+Epoch 85/99, Batch 200/361,Batch Loss=0.3712
+Epoch 85/99, Batch 300/361,Batch Loss=0.2444
+Epoch 85/99, AUC=0.5238, Accuracy=0.7366, Precision=0.5447, Recall=0.5238, F1=0.5171
+[[2035  207]
+ [ 553   90]]
+----------
+Train Epoch 86/99
+Epoch 86/99, Batch 0/361,Batch Loss=0.3138
+Epoch 86/99, Batch 100/361,Batch Loss=0.3031
+Epoch 86/99, Batch 200/361,Batch Loss=0.2507
+Epoch 86/99, Batch 300/361,Batch Loss=0.2481
+Epoch 86/99, AUC=0.5190, Accuracy=0.7196, Precision=0.5296, Recall=0.5190, F1=0.5149
+[[1975  267]
+ [ 542  101]]
+----------
+Train Epoch 87/99
+Epoch 87/99, Batch 0/361,Batch Loss=0.3529
+Epoch 87/99, Batch 100/361,Batch Loss=0.2248
+Epoch 87/99, Batch 200/361,Batch Loss=0.2334
+Epoch 87/99, Batch 300/361,Batch Loss=0.2242
+Epoch 87/99, AUC=0.5211, Accuracy=0.7307, Precision=0.5373, Recall=0.5211, F1=0.5149
+[[2016  226]
+ [ 551   92]]
+----------
+Train Epoch 88/99
+Epoch 88/99, Batch 0/361,Batch Loss=0.1753
+Epoch 88/99, Batch 100/361,Batch Loss=0.3552
+Epoch 88/99, Batch 200/361,Batch Loss=0.2443
+Epoch 88/99, Batch 300/361,Batch Loss=0.3361
+Epoch 88/99, AUC=0.5223, Accuracy=0.7231, Precision=0.5352, Recall=0.5223, F1=0.5186
+[[1983  259]
+ [ 540  103]]
+----------
+Train Epoch 89/99
+Epoch 89/99, Batch 0/361,Batch Loss=0.2438
+Epoch 89/99, Batch 100/361,Batch Loss=0.2569
+Epoch 89/99, Batch 200/361,Batch Loss=0.4806
+Epoch 89/99, Batch 300/361,Batch Loss=0.2983
+Epoch 89/99, AUC=0.5218, Accuracy=0.7352, Precision=0.5409, Recall=0.5218, F1=0.5145
+[[2033  209]
+ [ 555   88]]
+----------
+Train Epoch 90/99
+Epoch 90/99, Batch 0/361,Batch Loss=0.3918
+Epoch 90/99, Batch 100/361,Batch Loss=0.3946
+Epoch 90/99, Batch 200/361,Batch Loss=0.4029
+Epoch 90/99, Batch 300/361,Batch Loss=0.2614
+Epoch 90/99, AUC=0.5203, Accuracy=0.7234, Precision=0.5328, Recall=0.5203, F1=0.5158
+[[1988  254]
+ [ 544   99]]
+----------
+Train Epoch 91/99
+Epoch 91/99, Batch 0/361,Batch Loss=0.2725
+Epoch 91/99, Batch 100/361,Batch Loss=0.2338
+Epoch 91/99, Batch 200/361,Batch Loss=0.3149
+Epoch 91/99, Batch 300/361,Batch Loss=0.4116
+Epoch 91/99, AUC=0.5226, Accuracy=0.7303, Precision=0.5391, Recall=0.5226, F1=0.5171
+[[2012  230]
+ [ 548   95]]
+----------
+Train Epoch 92/99
+Epoch 92/99, Batch 0/361,Batch Loss=0.2432
+Epoch 92/99, Batch 100/361,Batch Loss=0.2924
+Epoch 92/99, Batch 200/361,Batch Loss=0.3809
+Epoch 92/99, Batch 300/361,Batch Loss=0.2010
+Epoch 92/99, AUC=0.5203, Accuracy=0.7269, Precision=0.5343, Recall=0.5203, F1=0.5149
+[[2002  240]
+ [ 548   95]]
+----------
+Train Epoch 93/99
+Epoch 93/99, Batch 0/361,Batch Loss=0.3539
+Epoch 93/99, Batch 100/361,Batch Loss=0.3247
+Epoch 93/99, Batch 200/361,Batch Loss=0.3247
+Epoch 93/99, Batch 300/361,Batch Loss=0.3870
+Epoch 93/99, AUC=0.5200, Accuracy=0.7289, Precision=0.5349, Recall=0.5200, F1=0.5138
+[[2011  231]
+ [ 551   92]]
+----------
+Train Epoch 94/99
+Epoch 94/99, Batch 0/361,Batch Loss=0.2190
+Epoch 94/99, Batch 100/361,Batch Loss=0.4307
+Epoch 94/99, Batch 200/361,Batch Loss=0.3606
+Epoch 94/99, Batch 300/361,Batch Loss=0.1701
+Epoch 94/99, AUC=0.5210, Accuracy=0.7244, Precision=0.5341, Recall=0.5210, F1=0.5165
+[[1991  251]
+ [ 544   99]]
+----------
+Train Epoch 95/99
+Epoch 95/99, Batch 0/361,Batch Loss=0.2784
+Epoch 95/99, Batch 100/361,Batch Loss=0.2810
+Epoch 95/99, Batch 200/361,Batch Loss=0.2440
+Epoch 95/99, Batch 300/361,Batch Loss=0.3007
+Epoch 95/99, AUC=0.5217, Accuracy=0.7255, Precision=0.5355, Recall=0.5217, F1=0.5172
+[[1994  248]
+ [ 544   99]]
+----------
+Train Epoch 96/99
+Epoch 96/99, Batch 0/361,Batch Loss=0.3036
+Epoch 96/99, Batch 100/361,Batch Loss=0.1971
+Epoch 96/99, Batch 200/361,Batch Loss=0.2991
+Epoch 96/99, Batch 300/361,Batch Loss=0.3594
+Epoch 96/99, AUC=0.5192, Accuracy=0.7286, Precision=0.5336, Recall=0.5192, F1=0.5128
+[[2011  231]
+ [ 552   91]]
+----------
+Train Epoch 97/99
+Epoch 97/99, Batch 0/361,Batch Loss=0.2389
+Epoch 97/99, Batch 100/361,Batch Loss=0.2751
+Epoch 97/99, Batch 200/361,Batch Loss=0.2460
+Epoch 97/99, Batch 300/361,Batch Loss=0.3177
+Epoch 97/99, AUC=0.5196, Accuracy=0.7265, Precision=0.5331, Recall=0.5196, F1=0.5139
+[[2002  240]
+ [ 549   94]]
+----------
+Train Epoch 98/99
+Epoch 98/99, Batch 0/361,Batch Loss=0.3502
+Epoch 98/99, Batch 100/361,Batch Loss=0.2431
+Epoch 98/99, Batch 200/361,Batch Loss=0.2614
+Epoch 98/99, Batch 300/361,Batch Loss=0.3329
+Epoch 98/99, AUC=0.5196, Accuracy=0.7265, Precision=0.5331, Recall=0.5196, F1=0.5139
+[[2002  240]
+ [ 549   94]]
+----------
+Train Epoch 99/99
+Epoch 99/99, Batch 0/361,Batch Loss=0.3647
+Epoch 99/99, Batch 100/361,Batch Loss=0.3514
+Epoch 99/99, Batch 200/361,Batch Loss=0.2958
+Epoch 99/99, Batch 300/361,Batch Loss=0.2847
+Epoch 99/99, AUC=0.5198, Accuracy=0.7269, Precision=0.5336, Recall=0.5198, F1=0.5141
+[[2003  239]
+ [ 549   94]]
